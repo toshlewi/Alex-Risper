@@ -401,21 +401,4 @@ if (PAGE === 'yes') {
       celebrate();
     }, 250);
   }
-
-  const portraitVideo = document.getElementById('portraitVideo');
-  const videoCover = document.getElementById('videoCover');
-
-  if (portraitVideo && videoCover) {
-    const play = async () => {
-      try {
-        portraitVideo.controls = true;
-        await portraitVideo.play();
-        videoCover.style.display = 'none';
-      } catch {
-        // ignore
-      }
-    };
-
-    videoCover.addEventListener('click', play);
-  }
 }
