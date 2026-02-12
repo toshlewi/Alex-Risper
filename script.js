@@ -11,8 +11,6 @@ const heartsLayer = document.getElementById('hearts');
 
 const PAGE = document.body?.dataset?.page || '';
 
-// IMPORTANT: Put Alex's WhatsApp number here in international format.
-// Example: "+2547XXXXXXXX" (no spaces)
 const ALEX_WHATSAPP_NUMBER = "+254716550186";
 
 const LOVE_MESSAGE = "am gonna be ur valentine darling \uD83D\uDC96\n\nFrom Risper to Alex";
@@ -73,6 +71,37 @@ if (heartsLayer) {
     spawnFloatingHeart();
   }, 520);
 }
+
+// ---- Scroll reveal animations ----
+function initScrollReveal() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = Array.from(
+    document.querySelectorAll('.landing__copy, .landing__card, .section__head, .card, .proposal__wrap, .poem__wrap')
+  );
+
+  targets.forEach((el, i) => {
+    el.classList.add('reveal');
+    el.classList.add(i % 2 === 0 ? 'reveal--left' : 'reveal--right');
+    el.style.setProperty('--reveal-delay', `${Math.min(i * 70, 420)}ms`);
+  });
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal--in');
+          io.unobserve(e.target);
+        }
+      }
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -10% 0px' }
+  );
+
+  targets.forEach((el) => io.observe(el));
+}
+
+initScrollReveal();
 
 // ---- No button runs away ----
 let noMoves = 0;
