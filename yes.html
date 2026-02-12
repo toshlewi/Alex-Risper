@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Risper — Alex — Yes!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="yes">
+    <canvas id="fxCanvas" aria-hidden="true"></canvas>
+    <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand__heart" aria-hidden="true">❤</span>
+        <span class="brand__text">Alex</span>
+        <span class="brand__dot" aria-hidden="true"> - </span>
+        <span class="brand__text">Risper</span>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section" aria-label="Celebration">
+        <div class="proposal__wrap">
+          <p class="kicker">Happy Valentine’s Day, my love</p>
+          <h1 class="title" style="margin-top: 6px;">You said Yes.</h1>
+          <p class="subtitle">Today and always — you’re my favorite person.</p>
+
+          <div class="afterYes" id="afterYes">
+            <p class="afterYes__note">Send Alex the sweetest confirmation.</p>
+            <a id="whatsAppLink" class="btn btn--wa" href="#" rel="noreferrer" target="_blank">Send “Yes” on WhatsApp</a>
+            <button id="copyMsgBtn" class="btn btn--ghost" type="button">Copy message</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Portrait video">
+        <div class="section__head">
+          <h2 class="section__title">A little us</h2>
+          <p class="section__sub">Press play — this one is for your heart.</p>
+        </div>
+
+        <figure class="card card--video portraitCard">
+          <div class="videoFrame" id="videoFrame">
+            <video id="portraitVideo" class="media portraitVideo" src="alexvid.mp4" playsinline preload="metadata"></video>
+            <button class="videoCover" id="videoCover" type="button" aria-label="Play video">
+              <div class="videoCover__love">LOVE</div>
+              <div class="videoCover__tap">Tap to play</div>
+            </button>
+          </div>
+          <figcaption class="caption">Keep this moment. Keep us.</figcaption>
+        </figure>
+      </section>
+
+      <section class="poem" id="poemSection" aria-label="Love poem">
+        <div class="poem__wrap">
+          <h2 class="poem__title">Risper, my Valentine</h2>
+          <div class="poem__text" id="poemText">
+            <p>
+              If love had a color, it would borrow your softness —
+              a blush of pink on a quiet morning,
+              a white-light calm that makes everything feel safe.
+              And if love had a direction,
+              it would always point me back to you.
+            </p>
+            <p>
+              I don’t want a perfect story.
+              I want a real one —
+              the kind where we laugh at small things,
+              hold each other through the heavy ones,
+              and choose each other again
+              like it’s the easiest promise in the world.
+            </p>
+            <p>
+              I love the way your presence changes a room —
+              how the air feels warmer,
+              how silence stops being lonely,
+              how my mind gets quieter
+              because my heart is finally home.
+            </p>
+            <p>
+              So here is my truth, said plainly:
+              I want the ordinary days with you.
+              I want the slow dances in the kitchen,
+              the "text me when you get home" care,
+              the forehead kisses,
+              the “I’m proud of you” moments,
+              the kind of love that grows roots.
+            </p>
+            <p>
+              This Valentine’s Day,
+              I’m not just asking for a date.
+              I’m asking for a chapter.
+              For your hand in mine.
+              For your heart beside mine.
+              For us —
+              in pink and white,
+              in storms and sunlight,
+              in every season that comes.
+            </p>
+            <p class="poem__sign">— Alex</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Made with pink  -  white energy.</span>
+      </footer>
+
+      <div class="balloons" id="balloons" aria-hidden="true"></div>
+
+      <div class="overlay" id="overlay" aria-hidden="true" hidden>
+        <div class="overlay__card">
+          <div class="overlay__title">Yaaay  -  you said YES!</div>
+          <div class="overlay__sub">Confetti. Balloons. Fireworks. Then a poem.</div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

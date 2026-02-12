@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex  -  Risper  -  Valentine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="index">
+    <canvas id="fxCanvas" aria-hidden="true"></canvas>
+    <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand__heart" aria-hidden="true">❤</span>
+        <span class="brand__text">Alex</span>
+        <span class="brand__dot" aria-hidden="true"> - </span>
+        <span class="brand__text">Risper</span>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="landing" aria-label="Landing">
+        <div class="landing__wrap">
+          <div class="landing__copy">
+            <p class="kicker">It’s almost</p>
+            <h1 class="title">Valentine’s Day</h1>
+            <p class="subtitle">I made you something small… but full of love.</p>
+
+            <div class="landing__cta">
+              <button id="toQuestionBtn" class="btn btn--yes" type="button">Open the proposal</button>
+              <div class="hint" id="hint">Tip: Try clicking No… if you can.</div>
+            </div>
+          </div>
+
+          <div class="landing__card" aria-label="Featured photo">
+            <img class="landing__img" src="alex1.jpeg" alt="Photo" loading="eager" />
+            <div class="landing__tag">From Alex — to Risper</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="memories" aria-label="Memories">
+        <div class="section__head">
+          <h2 class="section__title">Little memories</h2>
+          <p class="section__sub">Pink moments. White promises.</p>
+        </div>
+
+        <div class="gallery" aria-label="Photos">
+          <figure class="card">
+            <img class="media" src="alex1.jpeg" alt="Photo 1" loading="lazy" />
+            <figcaption class="caption">My favorite view.</figcaption>
+          </figure>
+          <figure class="card">
+            <img class="media" src="alex2.jpeg" alt="Photo 2" loading="lazy" />
+            <figcaption class="caption">You, in your softest light.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="proposal" id="proposal" aria-label="Valentine invitation">
+        <div class="proposal__wrap">
+          <p class="kicker">Official Valentine Proposal</p>
+          <h2 class="proposal__title">Risper, will you be my Valentine?</h2>
+          <p class="subtitle">From <strong>Alex</strong> — please choose wisely. (My heart is watching.)</p>
+
+          <div class="actions" role="group" aria-label="Answer buttons">
+            <button id="yesBtn" class="btn btn--yes" type="button">Yes — I will</button>
+            <button id="noBtn" class="btn btn--no" type="button">No</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Made with pink  -  white energy.</span>
+      </footer>
+
+      <div class="balloons" id="balloons" aria-hidden="true"></div>
+
+      <div class="overlay" id="overlay" aria-hidden="true" hidden>
+        <div class="overlay__card">
+          <div class="overlay__title">Yaaay  -  you said YES!</div>
+          <div class="overlay__sub">Confetti. Balloons. Fireworks. Then a poem.</div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
